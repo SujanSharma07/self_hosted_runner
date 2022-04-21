@@ -29,7 +29,8 @@ RUN apt install -y git curl unzip
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
 RUN rm awscliv2.zip
-
+RUN apt-get install telnet -y
+RUN apt-get install iputils-ping -y
 USER runner
 
 WORKDIR /
